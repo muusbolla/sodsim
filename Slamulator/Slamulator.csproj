@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E560B331-FC4A-40B8-A52D-D88BA88F02C7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Slamulator</RootNamespace>
+    <AssemblyName>Slamulator</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abilities\Ability.cs" />
+    <Compile Include="Abilities\AbilityCollection.cs" />
+    <Compile Include="Abilities\BattleStance.cs" />
+    <Compile Include="Abilities\BerserkerStance.cs" />
+    <Compile Include="Abilities\Bloodthirst.cs" />
+    <Compile Include="Abilities\DeathWish.cs" />
+    <Compile Include="Abilities\DMCMaelstrom.cs" />
+    <Compile Include="Abilities\Earthstrike.cs" />
+    <Compile Include="Abilities\Execute.cs" />
+    <Compile Include="Abilities\FlurryAxeHitMH.cs" />
+    <Compile Include="Abilities\Hamstring.cs" />
+    <Compile Include="Abilities\HeartOfWyrmthalak.cs" />
+    <Compile Include="Abilities\HOJHitMH.cs" />
+    <Compile Include="Abilities\IronfoeHitMH.cs" />
+    <Compile Include="Abilities\KissOfTheSpider.cs" />
+    <Compile Include="Abilities\Overpower.cs" />
+    <Compile Include="Abilities\Recklessness.cs" />
+    <Compile Include="Abilities\Slam.cs" />
+    <Compile Include="Abilities\SlayersCrest.cs" />
+    <Compile Include="Abilities\Whirlwind.cs" />
+    <Compile Include="Abilities\WhiteHitMH.cs" />
+    <Compile Include="Abilities\WhiteHitOH.cs" />
+    <Compile Include="Abilities\WindfuryTotemHitMH.cs" />
+    <Compile Include="Buffs\BlessingOfKings.cs" />
+    <Compile Include="Buffs\BonereaversEdgeBuff.cs" />
+    <Compile Include="Buffs\Buff.cs" />
+    <Compile Include="Buffs\BuffCollection.cs" />
+    <Compile Include="Buffs\Crusader.cs" />
+    <Compile Include="Buffs\DeathWishBuff.cs" />
+    <Compile Include="Buffs\EarthstrikeBuff.cs" />
+    <Compile Include="Buffs\EmpyreanDemolisherBuff.cs" />
+    <Compile Include="Buffs\EskhandarsRightClawBuff.cs" />
+    <Compile Include="Buffs\Felstriker.cs" />
+    <Compile Include="Buffs\Flurry.cs" />
+    <Compile Include="Buffs\KissOfTheSpiderBuff.cs" />
+    <Compile Include="Buffs\RecklessnessBuff.cs" />
+    <Compile Include="Buffs\SlayersCrestBuff.cs" />
+    <Compile Include="Buffs\SpiritOfZandalar.cs" />
+    <Compile Include="Buffs\UntamedFury.cs" />
+    <Compile Include="DualWield\DWForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DualWield\DWForm.Designer.cs">
+      <DependentUpon>DWForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DualWield\DWSimulator.cs" />
+    <Compile Include="DualWield\Globals.cs" />
+    <Compile Include="DualWield\PlayerState.cs" />
+    <Compile Include="DualWield\ServerSide.cs" />
+    <Compile Include="DualWield\ThreadedSimulationContext.cs" />
+    <Compile Include="DualWield\ThreadSafeRandom.cs" />
+    <Compile Include="Procs\BonereaversEdgeProc.cs" />
+    <Compile Include="Procs\CrusaderProc.cs" />
+    <Compile Include="Procs\DMCMaelstromProc.cs" />
+    <Compile Include="Procs\EmpyreanDemolisherProc.cs" />
+    <Compile Include="Procs\EskhandarsRightClawProc.cs" />
+    <Compile Include="Procs\FelstrikerProc.cs" />
+    <Compile Include="Procs\FlurryAxeProc.cs" />
+    <Compile Include="Procs\HandOfJusticeProc.cs" />
+    <Compile Include="Procs\HeartOfWyrmthalakProc.cs" />
+    <Compile Include="Procs\IronfoeProc.cs" />
+    <Compile Include="Procs\Proc.cs" />
+    <Compile Include="Procs\ProcCollection.cs" />
+    <Compile Include="Procs\UntamedBladeProc.cs" />
+    <Compile Include="Procs\WindfuryTotemProc.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="DualWield\DWForm.resx">
+      <DependentUpon>DWForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="GearData.xls">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
